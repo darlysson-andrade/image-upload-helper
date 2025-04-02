@@ -1,0 +1,96 @@
+:root {
+    --primary: #4CAF50;
+    --primary-dark: #319734;
+    --border: #ddd;
+    --hover: #f0f0f0;
+    --text: #333;
+    --text-light: #aaa;
+    --radius: 4px;
+    --transition: all 0.3s ease;
+} * {
+    box-sizing: border-box;
+} body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 16px;
+    width: 300px;
+    color: var(--text);
+}.hidden {
+    display: none;
+}#header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}.back-arrow {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary);
+    cursor: pointer;
+    margin-right: 8px;
+    transition: var(--transition);
+}.back-arrow:hover {
+    color: var(--primary-dark);
+}.input-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    color: var(--primary-dark);
+}.input-item:hover {
+    background-color: var(--hover);
+    border-color: var(--primary);
+}.floating-label {
+    position: relative;
+    margin: 16px 0;
+}.floating-label input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: var(--transition);
+}.floating-label input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}.floating-label label {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 4px;
+    color: var(--text-light);
+    pointer-events: none;
+    transition: var(--transition);
+}.floating-label input:focus+label, .floating-label input:not(:placeholder-shown)+label {
+    top: 0;
+    transform: translateY(-50%) scale(0.85);
+    color: var(--primary);
+}.button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}.button-fill {
+    background: var(--primary);
+    color: white;
+}.button-fill:hover {
+    background: var(--primary-dark);
+}.button-cancel {
+    background: #f1f1f1;
+}.button-cancel:hover {
+    background: #e0e0e0;
+}.button-group {
+    margin-top: 12px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Image Upload Helper</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="header">
+    <div id="backArrow" class="back-arrow hidden" aria-label="Voltar">&#8592;</div>
+  </div>
+  <div id="noInputsUI" class="hidden">
+    <p>No image upload fields found on this page.</p>
+  </div>
+  <div id="multipleInputsUI" class="hidden">
+    <p>Hover over the elements to highlight them on the page.</p>
+    <div id="inputsList"></div>
+  </div>
+  <div id="singleInputUI" class="hidden">
+    <p class="instructions">
+      Enter the image URL below and click SEND to add an image.
+      You can add multiple images by clicking SEND repeatedly.
+    </p>
+    <div class="floating-label">
+      <input type="text" id="imageUrl" placeholder=" " aria-label="Image URL">
+      <label for="imageUrl">FILE URL</label>
+    </div>
+    <small style="display:block; margin-bottom: 6px;">Press Ctrl+V to paste an image</small>
+    <div class="button-group">
+      <button id="fillBtn" class="button button-fill">SEND</button>
+      <button id="cancelBtn" class="button button-cancel">CANCEL</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
